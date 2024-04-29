@@ -1,0 +1,7 @@
+- add defer replies to all commands ⭐
+- add permission checks
+- embed colors
+- add interaction replies to catched errors
+- make separate repositories
+- clean up old files
+- clean up node modules

@@ -1,0 +1,1 @@
+console.log(process.env.LILIAN_TOKEN)
