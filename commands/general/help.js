@@ -14,7 +14,7 @@ module.exports = {
         .setColor("#f5bde6")
         .addFields(
             {name:'Lilian Support Server',value:'Need help? [Click to Join the Support Server](https://discord.gg/smBNsAX)'},
-            {name:':green_book:  General Commands',value:'```\nhelp\nuser\nping\ninfo\nsupport\n ```',inline:true},
+            {name:':green_book:  General Commands',value:'```\nhelp\nuserinfo\nping\ninfo\nsupport\n ```',inline:true},
             {name:':busts_in_silhouette:  Social commands',value:'```\nembed\npoll\navatar\n \n \n ```',inline:true},
             {name:':gift:  Fun commands',value:'```\nrate\n8ball\nweather\nyoutube\nminesweeper\nfortunecookie```',inline:true},
             {name:':woman_detective:  Moderator Commands',value:'```\nmodlog\nwarn\nkick\nban\nmute\nunmute\nclear\n ```',inline:true},
@@ -23,7 +23,7 @@ module.exports = {
 
         const Hgeneral = new EmbedBuilder()
         .setTitle(':green_book: General Commands')
-        .setDescription("**help** - Gives you a documentation of the bot\n**user** - Get info on users of the server\n**ping** - Check if the bot is online\n**info** - About me page\n**support** - Get an invite link for the Lilian Support Server\n  \n**Permissions Required :dvd:**\nnone")
+        .setDescription("**help** - Gives you a documentation of the bot\n**userinfo** - Get info on users of the server\n**ping** - Check if the bot is online\n**info** - About me page\n**support** - Get an invite link for the Lilian Support Server\n  \n**Permissions Required :dvd:**\nnone")
         .setColor("#f5bde6")
 
         const Hsocial = new EmbedBuilder()

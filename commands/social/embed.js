@@ -34,7 +34,7 @@ module.exports = {
         .setTitle(embedTitle)
         .setDescription(embedBody)
         .setColor(embedColor)
-        .setFooter({ text: 'Embed written by : '+interaction.user.displayName, iconURL: interaction.user.displayAvatarURL() });
+        .setFooter({ text: 'Embed written by : '+interaction.user.displayName+' | '+interaction.user.id, iconURL: interaction.user.displayAvatarURL() });
 
         await interaction.reply({embeds: [Eembed]})
     },

@@ -31,7 +31,7 @@ module.exports = {
             const Epoll = new EmbedBuilder()
             .setTitle('**Poll : **'+question)
             .setDescription(pollDesc)
-            .setFooter({ text: 'Poll initiated by : '+interaction.user.displayName, iconURL: interaction.user.displayAvatarURL() })
+            .setFooter({ text: 'Poll initiated by : '+interaction.user.displayName+' | '+interaction.user.id, iconURL: interaction.user.displayAvatarURL() })
             .setColor('#f6c511')
 
             const message = await interaction.reply({embeds: [Epoll],fetchReply:true})
