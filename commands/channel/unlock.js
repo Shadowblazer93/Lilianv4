@@ -4,7 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('unlock')
         .setDescription('Allows users to send messages again in a locked channel')
-        .setDefaultMemberPermissions(PermissionFlagsBits.ManageRoles,PermissionFlagsBits.ManageChannels)
+        .setDefaultMemberPermissions(PermissionFlagsBits.ManageRoles | PermissionFlagsBits.ManageChannels)
         .setDMPermission(false)
 
         .addChannelOption(option => option

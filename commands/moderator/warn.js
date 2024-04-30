@@ -4,7 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('warn')
         .setDescription('Log a warning for a user in modlog channel')
-        .setDefaultMemberPermissions(PermissionFlagsBits.ModerateMembers && PermissionFlagsBits.KickMembers)
+        .setDefaultMemberPermissions(PermissionFlagsBits.ModerateMembers | PermissionFlagsBits.KickMembers)
         .setDMPermission(false)
 
         .addUserOption(option => option

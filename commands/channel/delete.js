@@ -5,6 +5,7 @@ module.exports = {
         .setName('delete')
         .setDescription('Delete a channel')
         .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels)
+        .setDMPermission(false)
 
         .addChannelOption(option => option
             .setName('channel')

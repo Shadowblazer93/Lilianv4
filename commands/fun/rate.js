@@ -4,10 +4,9 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('rate')
         .setDescription('Rate a user on a scale of 10')
-        .setDMPermission(false)
         .addUserOption(option => option
             .setName('user')
-            .setDescription('The user you want to get information on')
+            .setDescription('The user you want to get a rating of')
             .setRequired(false)),
 
     async execute(interaction) { 

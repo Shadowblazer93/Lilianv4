@@ -14,8 +14,8 @@ module.exports = {
         .setColor("#f5bde6")
         .addFields(
             {name:'Lilian Support Server',value:'Need help? [Click to Join the Support Server](https://discord.gg/smBNsAX)'},
-            {name:':green_book:  General Commands',value:'```\nhelp\nuser\nping\ninfo\nreport\n ```',inline:true},
-            {name:':busts_in_silhouette:  Social commands',value:'```\nembed\npoll\nvote\n \n \n ```',inline:true},
+            {name:':green_book:  General Commands',value:'```\nhelp\nuser\nping\ninfo\nsupport\n ```',inline:true},
+            {name:':busts_in_silhouette:  Social commands',value:'```\nembed\npoll\navatar\n \n \n ```',inline:true},
             {name:':gift:  Fun commands',value:'```\nrate\n8ball\nweather\nyoutube\nminesweeper\nfortunecookie```',inline:true},
             {name:':woman_detective:  Moderator Commands',value:'```\nmodlog\nwarn\nkick\nban\nmute\nunmute\nclear\n ```',inline:true},
             {name:':scroll:  Channel commands',value:'```\nclone\ncreate\ndelete\nnuke\ntopic\nlock\nunlock\nslowmode```',inline:true}
@@ -23,27 +23,27 @@ module.exports = {
 
         const Hgeneral = new EmbedBuilder()
         .setTitle(':green_book: General Commands')
-        .setDescription("**;help** - Gives you a documentation on the bot\n**;dm** - Sends the help command in DMs\n**;user** - Get hidden info on users\n**;info** - Bot's about me page\n**;ping** - To check connection with the bot\n**;invite** - For getting Lilian's invite link\n \n**Syntax of Commands :wrench:**\n`;user [@user]`\n  \n**Permissions Required :dvd:**\nnone\n \n**NOTE** - *Adding these brackets is not required when executing commands*")
+        .setDescription("**help** - Gives you a documentation of the bot\n**user** - Get info on users of the server\n**ping** - Check if the bot is online\n**info** - About me page\n**support** - Get an invite link for the Lilian Support Server\n  \n**Permissions Required :dvd:**\nnone")
         .setColor("#f5bde6")
 
         const Hsocial = new EmbedBuilder()
         .setTitle(':busts_in_silhouette: Social Commands')
-        .setDescription("**;embed** - Embed creation tool\n**;poll** - For getting opinions on a question\n**;vote** - To decide from two options\n**;choose** - randomly choose from one option\n \n**Syntax of Commands :wrench:**\n`;embed [title] + [body] + (colour)`\n`;poll [topic]`\n`;vote [choice1] + [choice2]`\n`;choose [choice1] + [choice2]`\n \n**Permissions Required :dvd:**\nmanage messages\n \n**NOTE** - *Adding these brackets is not required when executing commands*")
+        .setDescription("**embed** - Embed creation tool\n**poll** - Create a poll\n**avatar** - Get a link to a user\'s avatar\n \n**Permissions Required :dvd:**\nmanage messages")
         .setColor("#f5bde6")
 
         const Hfun = new EmbedBuilder()
         .setTitle(':gift: Fun Commands')
-        .setDescription('**;chat** - **NEW! Chat with Lilian!**\n**;rate** - get Lilian\'s rating on topics\n**;8ball** - Ask Lilian what she thinks about something\n**;weather** - Get the weather for **Any Place**\n**;youtube** - Search for youtube videos\n**;coinflip** - Flip a coin\n**;minesweeper** - Play minesweeper in discord!\n \n**Syntax of Commands :wrench:**\n`;chat [text]`\n`;rate [text]`\n`;8ball [text]`\n`;weather [location]`\n`;youtube [text]`\n \n**Permissions Required :dvd:**\nnone\n \n**NOTE** - *Adding these brackets is not required when executing commands*')
+        .setDescription('**rate** - get Lilian\'s rating on users\n**8ball** - Ask Lilian a question\n**weather** - Get the weather for **Any Place**\n**youtube** - Search for youtube videos\n**minesweeper** - Play minesweeper in discord!\n \n**Permissions Required :dvd:**\nnone')
         .setColor("#f5bde6")
 
         const Hmod = new EmbedBuilder()
         .setTitle(':woman_detective: Moderator Commands')
-        .setDescription('**;modlog** - Setup the logger integration\n**;warn** - warns a user\n**;kick** - kicks a user\n**;ban** - bans a user\n**;nick** - Change a user\'s nickname\n**;mute** - mutes a user\n**;clear** - Mass delete channel history\n**;unmute** - unmutes a user\n**;report** - report a user\n \n**Syntax of Commands**\n`;command [@user]`\n`;clear [num]`\n \n**Permissions required :dvd:**\nmoderator\n \nNOTE - Adding these brackets is not required when executing commands')
+        .setDescription('**modlog** - Setup the logger integration\n**warn** - warns a user\n**kick** - kicks a user\n**ban** - bans a user\n**mute** - mutes a user\n**unmute** - unmutes a user\n**clear** - Mass delete channel history\n \n**Permissions required :dvd:**\n**modlog :** ADMINISTRATOR\n**warn :** manage_members & kick_members\n**kick :** kick_members\n**ban :** ban_members\n**mute :** moderate_members\n**unmute :** moderate_members\n**clear :** manage_messages')
         .setColor("#f5bde6")
 
         const Hchannel = new EmbedBuilder()
         .setTitle(':scroll: Channel commands')
-        .setDescription('**;nuke** - Delete all messages from a channel\n**;clone** - Make an exact copy of a channel\n**;topic** - Quick way to change channel topics\n**;create** - Create a channel\n**;delete** - Delete a channel\n**;lock** - Prevent members from sending messages in a channel\n**;unlock** - Allow members to send messages in a locked channel again\n**;slowmode** - Set slowmode for channels\n \n**Syntax of Commands :wrench:**\n`;cmd [#channel]`\n`;topic [text]`\n \n**Permissions required :dvd:**\nmanage channels\n \nNOTE - Adding these brackets is not required when executing commands')
+        .setDescription('**clone** - Make an exact copy of a channel\n**create** - Create a channel\n**delete** - Delete a channel\n**nuke** - Delete all messages from a channel\n**topic** - Quick way to change channel topics\n**lock** - Prevent members from sending messages in a channel\n**unlock** - Allow members to send messages in a locked channel again\n**slowmode** - Set slowmode for channels\n \n**Permissions required :dvd:**\nmanage channels')
         .setColor("#f5bde6")
 
         const Hinfo = new EmbedBuilder()

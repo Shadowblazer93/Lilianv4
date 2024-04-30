@@ -1,10 +1,12 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder,PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('embed')
         .setDescription('Create user-generated embeds')
-        
+        .setDMPermission(false)
+        .setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages)
+
         .addStringOption(option =>
             option.setName("title")
             .setDescription('Enter embed title')

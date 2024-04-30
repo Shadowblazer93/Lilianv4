@@ -5,7 +5,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('lock')
         .setDescription('Restrict users from sending messages in a channel')
-        .setDefaultMemberPermissions(PermissionFlagsBits.ManageRoles,PermissionFlagsBits.ManageChannels)
+        .setDefaultMemberPermissions(PermissionFlagsBits.ManageRoles | PermissionFlagsBits.ManageChannels)
         .setDMPermission(false)
 
         .addChannelOption(option => option

@@ -3,7 +3,8 @@ const { SlashCommandBuilder, EmbedBuilder, ContextMenuCommandBuilder, Applicatio
 module.exports = {
     data: new ContextMenuCommandBuilder()
             .setName('User Information')
-            .setType(ApplicationCommandType.User),
+            .setType(ApplicationCommandType.User)
+            .setDMPermission(false),
 
     async execute(interaction) { 
 

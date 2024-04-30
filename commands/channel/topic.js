@@ -5,6 +5,7 @@ module.exports = {
         .setName('topic')
         .setDescription('Set the topic of a channel')
         .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels)
+        .setDMPermission(false)
 
         .addStringOption(option =>
             option.setName("topic")

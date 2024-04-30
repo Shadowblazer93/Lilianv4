@@ -5,6 +5,7 @@ module.exports = {
         .setName('clone')
         .setDescription('Clones a channel')
         .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels)
+        .setDMPermission(false)
 
         .addChannelOption(option => option
             .setName('channel')
