@@ -1,7 +1,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const { Client, Events, GatewayIntentBits, Collection } = require('discord.js');
+const { Client, Events, GatewayIntentBits, Collection, ActivityType } = require('discord.js');
+const { version } = require('./config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 
@@ -40,11 +41,16 @@ for (const file of eventFiles) {
 	}
 }
 
+// Set Presence
+client.on("ready", async () => {
+	await client.guilds.cache.fetch
+	client.user.setPresence({ activities: [{ name: '/help | '+client.guilds.cache.size+' servers | '+version, type:ActivityType.Custom}]});
+})
+
 
 // Slash Command Listener & Execution
 client.on(Events.InteractionCreate, async interaction => {
     //if (!interaction.isChatInputCommand()) return;
-
     const command = interaction.client.commands.get(interaction.commandName);
 
 	if (!command) {
