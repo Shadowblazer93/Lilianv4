@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-
+const keep_alive= require('./keep_alive.js');
 const { Client, Events, GatewayIntentBits, Collection, ActivityType } = require('discord.js');
 const { version } = require('./config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
