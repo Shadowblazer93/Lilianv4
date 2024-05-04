@@ -6,6 +6,11 @@ const job = new cron.CronJob('*/14 * * * *', function() {
     console.log('Restarting server');
 
     https
+        .createServer(function (req,res) {
+            res.write('This thing working?');
+            res.end();
+        }).listen((8080))
+
         .get(backendUrl, (res) => {
             if (res.statusCode === 200) {
                 console.log('Server restarted');
