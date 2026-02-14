@@ -1,4 +1,5 @@
 // require('dotenv').config();
+console.log("🚀 Bot is starting...");
 const fs = require('node:fs');
 const path = require('node:path');
 const keep_alive= require('./keep_alive.js');
@@ -71,4 +72,12 @@ client.on(Events.InteractionCreate, async interaction => {
 });
 
 
-client.login(process.env.LILIAN_TOKEN);
+if (!process.env.LILIAN_TOKEN) {
+    console.warn("⚠️  LILIAN_TOKEN is missing from environment variables!");
+}
+
+client.login(process.env.LILIAN_TOKEN).catch(err => {
+    console.error("❌ Login failed:", err);
+});
+console.log("🔄 Attempting to login using token...");
+
